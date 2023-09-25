@@ -1,59 +1,58 @@
 // Created an Object of Questions 
 var questions = [
     {
-       questions1: "How many key changes are in giant steps?", 
+       question: "How many key changes are in giant steps?", 
        choices: ["1","2","3","4"],
        answer: "3"
     },
     {
-        question2: "Which is not a mode?", 
+        question: "Which is not a mode?", 
         choices: ["Ionian","Dorian","Locrian","Agrenian?"],
         answer: "Agrenian"
      },
      {
-        question3: "How many sharps and flats are in the major scale?", 
+        question: "How many sharps and flats are in the major scale?", 
         choices: ["0","2","4","1"],
         answer: "0"
      },
      {
-        question4: "What musical composer played a bicycle on TV?", 
+        question: "What musical composer played a bicycle on TV?", 
         choices: ["Frank Zappa","Paul McCartney","Cher","Beyonce"],
         answer: "Frank Zappa"
      },
      {
-        question5: "If a guitar is tuned a full step down, what is the 6th string tuned to?", 
+        question: "If a guitar is tuned a full step down, what is the 6th string tuned to?", 
         choices: ["A#","Bb","Eb","D"],
         answer: "D"
      },
 ]
+// Targets start button in html
 var startButton = document.querySelector(".start");
-
-
 // User Score
 var score = 0; 
-
-
-
-for (var i=0; i < questions.length; i++){
-    index = index.legnth + 1; 
-    if (index < 0) {
-        index = questions.length - 1; 
-    } else if (index > questions.length - 1) {
-        index = 0;
-    }
-}
-
-   
 // Grabbing a class of time declared in HTML 
 var timeEl = document.querySelector(".time");
-
 // Grabbing a section of main declared in the HTML Header 
 var mainEl = document.getElementById("main");
+var displayEl = document.getElementById("display");
+var questionsInd = 1
+var listEl = document.getElementById("list");
 
+// When I press the start button 
+function questionsLeft() {
+    document.getElementById("display-question").textContent=questions[questionsInd].question
+    for (var i=0; i < questions[questionsInd].choices.length; i++){
+        var li = document.createElement("li")
+        li.textContent = questions[questionsInd].choices[i]
+        listEl.append(li)
+        console.log(questions[questionsInd].choices[i]);
+    }
+    }
+ 
 // countdown 
 var secondsLeft = 120; 
 
-function setTime() {
+function setTime(event) {
     var timerInterval = setInterval(function (){
         secondsLeft--; 
         timeEl.textContent = secondsLeft + " Seconds Remaining"; 
@@ -68,8 +67,14 @@ function sendMessage()  {
     timeEl.textContent = "";
     
 }
-setTime();
 
+function start() {
+    setTime();
+    questionsLeft();
+    mainEl.style.display="none"
+    displayEl.style.display="block"
+}
+ startButton.addEventListener("click", start)
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button

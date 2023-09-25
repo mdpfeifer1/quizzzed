@@ -44,3 +44,7 @@ button:hover {
     background-color: aqua;
     
 }
+
+#display {
+    display: none;
+}
