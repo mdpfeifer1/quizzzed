@@ -1,0 +1,46 @@
+* {
+    font-family: fantasy;
+}
+
+body { 
+ 
+}
+
+/* Class of Time in H1 */
+.time {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+/* Section ID Main */
+#main {
+
+}
+
+/* Paragraph of #Main */
+p {
+    color: blueviolet;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.start {
+    font-size: 2rem;
+    margin-left: 700px;
+    margin-top: 30px;
+    transition: 3s;
+}
+
+.choice {
+    font-size: 2rem;
+    margin-left: 600px;
+    margin-top: 20px;
+    transition: 3s;
+}
+
+button:hover {
+    background-color: aqua;
+    
+}
