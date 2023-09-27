@@ -3,6 +3,7 @@
 }
 
 body { 
+    
  
 }
 
@@ -15,7 +16,7 @@ body {
 
 /* Section ID Main */
 #main {
-
+   
 }
 
 /* Paragraph of #Main */
@@ -31,6 +32,7 @@ p {
     margin-left: 700px;
     margin-top: 30px;
     transition: 3s;
+    z-index: 1;
 }
 
 .choice {
@@ -40,11 +42,16 @@ p {
     transition: 3s;
 }
 
-button:hover {
+li:hover {
     background-color: aqua;
     
 }
 
 #display {
     display: none;
+    font-size: 30px;  
+}
+
+aside {
+    
 }
