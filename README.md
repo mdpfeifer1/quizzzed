@@ -11,6 +11,10 @@
 -Gives user a input field for their name/initials.
 -Saves their score to localStorage
 
+## Deployed 
+
+https://mdpfeifer1.github.io/quizzzed/
+
 
 ## Table of Contents 
 
@@ -19,7 +23,7 @@
 - [License](#license)
 
 ## Usage
-(![Project](./imgs/127.0.0.1_5500_index.html%20(3).png))
+(![Project](/assets/imgs/mdpfeifer1.github.io_quizzzed_.png))
 
 ## Credits
 
