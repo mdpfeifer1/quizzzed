@@ -45,13 +45,15 @@ var secondsLeft = 120;
 // Quiz scores
 var quizScores = document.getElementById("quiz-score"); 
 
+
+
 document.getElementById("final-section").setAttribute("style", "display:none");
 
+// function declared to check User Answers
 function checkAnswer(e)
 {
     e.preventDefault();
-    //alert("inside test");
-    var userChoice = this.getAttribute("data-answer");
+   var userChoice = this.getAttribute("data-answer");
     console.log(userChoice);
 
     if(userChoice === questions[questionsInd].answer)
@@ -81,14 +83,29 @@ function checkAnswer(e)
 }
 
 function stopQuestions(){
+   
    //hide questions coccc
    //show final-section  with textbox and button to enter initials
    //once user enters initials and click on submit button you will be storing initials and score into localstorage
    //get all the initials and score saved into localstorage and display it on the screen
 }
 
-// When I press the start button 
+// function storeScoreBoard(){
+//     var userName = prompt("Go on put your initals  (only 3 now!):");
+//     if (userName && userName.length === 3) {
+//         var userScore = JSON.parse(localStorage.getItem("userScore")) [];
+//         userScore.push({score:secondsLeft,userName:userName});
+//         userScore.sort(function(a,b){
+//             return b.userScore - a.userScore;
+//         });
+//         localStorage.setItem("userScore", JSON.stringify(userScore));
+//         displayScore();
+//     } else
+// }
+
+// Function containing loop 
 function questionsLeft() {
+    // clears string of questions, answers and choices
     listEl.textContent = "";
     document.getElementById("display-question").textContent=questions[questionsInd].question
     for (var i=0; i < questions[questionsInd].choices.length; i++){
@@ -99,14 +116,6 @@ function questionsLeft() {
         btn.onclick = checkAnswer;
         btn.append(li);
         listEl.append(btn)};
-        /*listEl.addEventListener("click", function(){
-            if (questions.choices===questions.answers){ 
-            score ++;
-            } else {
-            secondsLeft-=10;
-          }
-          )} */
-          
         }
         
     
@@ -156,21 +165,3 @@ function start() {
 
 
 //TODO create a start button that wont display the questions until pressed
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-
-
-
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-
-// THEN the game is over
-// WHEN the game is over
-
-// THEN I can save my initials and my score
