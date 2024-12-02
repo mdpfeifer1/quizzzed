@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/reset.css" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Quizzed</title>
   </head>
   <body>
     <h1 class="time"></h1>
-    '
+    
     <section id="main">
       <p>Music Quiz</p>
       <button class="start">Start</button>
@@ -17,26 +17,27 @@
 
     <!--   Section    -->
     <section id="display">
-        <section class="container">
-       <h2 id="display-question"></h2>
-        <ul id ="list"></ul>
-         </section>
-             </section>
-         
-        <section id="final-section">
-    <p>Your Score <span id="quiz-score">0</span></p>
-  <!-- User Text Box --> 
-    <input type="text" id="initials">
-    <button id="initial-submit">Submit</button>
-        <h3>High Score</h3>
-        <ul id = "high-score"></ul>
- </section>
+      <section class="container">
+        <h2 id="display-question"></h2>
+        <ul id="list">
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+          <li>Option 4</li>
+        </ul>
+      </section>
+    </section>
 
-
-  
-   
+    <section id="final-section">
+      <p>Your Score <span id="quiz-score">0</span></p>
+      <input type="text" id="initials" />
+      <button id="initial-submit">Submit</button>
+      <!-- <h3>High Score</h3> -->
+      <ul id="high-score"></ul>
+      <button id="reset-button" class="reset-button">Reset</button>
+    </section>
 
     <!-- JS Link -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
